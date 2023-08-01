@@ -1,0 +1,242 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px -1px 5px 1px rgb(223, 223, 223);
+  width: 605px;
+  height: 730px;
+  background-color: rgb(253, 253, 253);
+}
+
+.header {
+  width: 95.5%;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 13px;
+}
+
+.title {
+  font-size: 18px;
+  background-image: linear-gradient(
+    106deg,
+    rgba(15, 97, 230, 1) 0%,
+    rgba(15, 74, 170, 1) 97%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 12px;
+  color: rgb(182, 182, 182);
+  line-height: 1;
+}
+
+.form {
+  width: 60%;
+  flex: 20;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 30px;
+}
+
+.switch {
+  padding: 0 0 10px 0;
+}
+
+.switch-buttons {
+  display: flex;
+  box-shadow: 1px 0px 2px 0px rgb(223, 223, 223);
+  border: #616060;
+  border-radius: 1rem;
+  background-color: rgb(253, 253, 253);
+  padding: 0px;
+}
+
+.switch-button {
+  flex: 1;
+  padding: 8px 18px;
+  background-color: rgb(253, 253, 253);
+  color: #767676;
+  border-radius: 1rem;
+}
+
+.selected {
+  background-color: rgb(0, 91, 234);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.form-title {
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.title-tab {
+  width: 100%;
+  box-shadow: 1px 0px 2px 0px rgb(223, 223, 223);
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  background-color: rgb(245, 245, 245);
+  color: rgb(101, 101, 101);
+  padding: 0px;
+  border: 1px solid rgb(244, 244, 244);
+}
+
+.title-tab-icon {
+  padding: 7px;
+  display: flex;
+  border-radius: 5px;
+  background: linear-gradient(
+    106deg,
+    rgba(15, 97, 230, 1) 0%,
+    rgba(15, 74, 170, 1) 97%
+  );
+  box-shadow: 2px 0px 5px 1px rgb(183, 190, 199);
+}
+
+.title-tab-icon i {
+  font-size: 18px;
+  color: rgb(247, 247, 247);
+}
+
+.title-tab-text {
+  font-weight: bold;
+  padding-left: 5px;
+  color: rgb(101, 101, 101);
+}
+
+.form-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1px;
+}
+
+.next {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+
+.next-button {
+  padding: 8px 18px;
+  background-color: rgb(253, 253, 253);
+  color: #767676;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  margin: 16px 0px;
+  box-shadow: 0px 0px 5px 0px rgb(223, 223, 223);
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+.tabs-tab {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.tabs-tab-icon {
+  padding: 6px;
+  display: flex;
+  border-radius: 5px;
+  background: rgb(79, 79, 79);
+  box-shadow: 2px 0px 5px 1px rgb(183, 190, 199);
+}
+
+.tabs-tab-icon i {
+  font-size: 18px;
+  color: rgb(247, 247, 247);
+}
+
+.tabs-tab-text {
+  width: 100%;
+  font-weight: bold;
+  color: rgb(79, 79, 79);
+  box-shadow: 1px 0px 2px 0px rgb(223, 223, 223);
+  border-radius: 5px;
+  background-color: rgb(245, 245, 245);
+  padding: 5px 0px 5px 12px;
+}
+
+.tabs-tab-edit {
+  font-weight: bold;
+  color: rgb(188, 188, 188);
+  box-shadow: 1px 0px 2px 0px rgb(223, 223, 223);
+  border-radius: 1px;
+  background-color: rgb(245, 245, 245);
+  padding: 4px 13px;
+  border-right: 1px solid rgb(188, 188, 188);
+  font-size: 18px;
+}
+
+.tabs-tab-add {
+  font-weight: bold;
+  color: rgb(188, 188, 188);
+  box-shadow: 1px 0px 2px 0px rgb(223, 223, 223);
+  border-radius: 1px 5px 5px 1px;
+  background-color: rgb(245, 245, 245);
+  padding: 4px 13px;
+  font-size: 18px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+.not-single {
+  border-radius: 5px 1px 1px 5px;
+  border-right: 1px solid rgb(188, 188, 188);
+}
+
+.discard-finish {
+  width: 100%;
+  padding: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.discard-button {
+  display: flex;
+  box-shadow: 0px 0px 5px 0px rgb(223, 223, 223);
+  border: #616060;
+  border-radius: 1rem;
+  background-color: rgb(253, 253, 253);
+  color: rgb(119, 119, 119);
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.finish-button {
+  display: flex;
+  box-shadow: 1px 0px 2px 0px rgb(223, 223, 223);
+  border: #616060;
+  border-radius: 1rem;
+  background-color: rgb(0, 91, 234);
+  color: rgb(255, 255, 255);
+  padding: 10px 25px;
+  font-weight: bold;
+}

@@ -1,0 +1,88 @@
+<div class="container">
+  <div class="header">
+    <div class="title">Create Work Order</div>
+    <div class="description">
+      Use this section to record any events related to truck or trailer
+      maintenance<br />such as repairs, inspections, or maintenance tasks. You
+      can also add follow-up notes, <br />photos or documentation to keep track
+      of the maintenance progress. <br />Stay organized and informed
+    </div>
+  </div>
+  <div class="form">
+    <div class="switch">
+      <button class="switch-buttons">
+        <div class="switch-button selected">Truck</div>
+        <div class="switch-button">Trailer</div>
+      </button>
+    </div>
+    <div class="form-title">
+      <button class="title-tab">
+        <div class="title-tab-icon">
+          <i class="fas fa-info-circle"></i>
+        </div>
+        <div class="title-tab-text">Basic info</div>
+      </button>
+    </div>
+    <div class="form-info">
+      <app-info-tab key="Truck" value="7996"></app-info-tab>
+      <app-info-tab
+        key="Brand"
+        value="Freightliner Cascadia 2018"
+      ></app-info-tab>
+      <app-info-tab key="Trailer #" value="465156"></app-info-tab>
+      <app-info-tab key="Driver" value="Frederick Robinson"></app-info-tab>
+      <app-info-tab key="Dispatcher" value="Bojana Bogdanovic"></app-info-tab>
+      <app-info-tab key="Load status" value="In transit"></app-info-tab>
+    </div>
+    <div class="next">
+      <button class="next-button">Next</button>
+    </div>
+    <div class="tabs">
+      <div style="display: flex; gap: 3px">
+        <div class="tabs-tab-icon">
+          <i class="icon fas fa-wrench"></i>
+        </div>
+        <div class="tabs-tab" style="gap: 0rem">
+          <div class="tabs-tab-text not-single">Work order</div>
+          <div class="tabs-tab-edit">
+            <i class="icon fas fa-edit"></i>
+          </div>
+          <div class="tabs-tab-add">
+            <i class="icon fas fa-plus-circle"></i>
+          </div>
+        </div>
+      </div>
+      <div class="tabs-tab">
+        <div class="tabs-tab-icon">
+          <i class="icon fas fa-address-book"></i>
+        </div>
+        <div class="tabs-tab-text">Contact details</div>
+      </div>
+
+      <div style="display: flex; gap: 3px">
+        <div class="tabs-tab-icon">
+          <i class="icon fas fa-credit-card"></i>
+        </div>
+        <div class="tabs-tab" style="gap: 0rem">
+          <div class="tabs-tab-text not-single">Payment details</div>
+          <div class="tabs-tab-edit">
+            <i class="icon fas fa-edit"></i>
+          </div>
+          <div class="tabs-tab-add">
+            <i class="icon fas fa-plus-circle"></i>
+          </div>
+        </div>
+      </div>
+      <div class="tabs-tab">
+        <div class="tabs-tab-icon">
+          <i class="icon fas fa-flag-checkered"></i>
+        </div>
+        <div class="tabs-tab-text">Start/End</div>
+      </div>
+    </div>
+    <div class="discard-finish">
+      <button class="discard-button">Discard</button>
+      <button class="finish-button">Finish</button>
+    </div>
+  </div>
+</div>

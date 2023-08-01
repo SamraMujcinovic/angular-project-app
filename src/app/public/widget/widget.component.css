@@ -1,0 +1,188 @@
+.rectangular-component {
+  width: 88%;
+  padding: 5px 10px;
+  border-radius: 1rem;
+  justify-content: center;
+  box-shadow: 1px 0px 5px 1px rgb(223, 223, 223);
+}
+
+.upper-middle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.right-corner i {
+  font-size: 12px !important;
+}
+
+.corner-icon {
+  display: flex;
+  gap: 10px;
+}
+
+.corner-icon i {
+  background-image: linear-gradient(
+    106deg,
+    rgba(15, 97, 230, 1) 0%,
+    rgba(15, 74, 170, 1) 97%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 24px;
+}
+
+.corner-icon span {
+  padding-top: 10px;
+}
+
+.corner-icon img {
+  width: 35px;
+  height: 35px;
+}
+
+.title-text {
+  background-image: linear-gradient(
+    106deg,
+    rgba(15, 97, 230, 1) 0%,
+    rgba(15, 74, 170, 1) 97%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 18px;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  margin-bottom: 10px;
+}
+
+.subcomponent {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 1px 0px 5px 1px rgb(223, 223, 223);
+}
+
+.integer-counter {
+  font-size: 32px;
+  color: #333;
+  font-weight: bold;
+}
+.double-counter {
+  display: flex;
+  justify-content: center;
+}
+
+.integer-counter2 {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+.counter-wrapper {
+  flex-basis: 40%;
+
+  text-align: center;
+}
+
+.counter-title {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 1px;
+}
+
+.counter-separator {
+  border-left: 1px solid #000000;
+  margin: 0 4px;
+}
+
+.daily-average {
+  margin-top: 5px;
+  margin-bottom: 1px;
+  display: flex;
+  justify-content: center;
+}
+
+.average-title {
+  font-size: 12px;
+  color: #888;
+}
+
+.average-counter {
+  font-size: 12px;
+  color: #333;
+  padding: 0px 5px;
+}
+
+.time-counter {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.money-counter {
+  font-size: 32px;
+  color: #333;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.corner-text {
+  text-align: left;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.corner-text1 {
+  float: left;
+  font-size: 14px;
+  color: #888;
+}
+
+.upper-right {
+  float: right;
+  font-size: 12px;
+  color: #888;
+}
+
+.time-text {
+  font-size: 10px;
+  word-spacing: 16px;
+  color: #888;
+}
+
+.small-counter {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.button-div {
+  box-shadow: #080606;
+}
+
+.see-more-button {
+  font-size: 12px;
+  width: 7rem;
+  height: 2rem;
+  box-shadow: 1px 0px 5px 1px rgb(223, 223, 223);
+  background-color: rgb(255, 255, 255);
+  color: #767676;
+  margin-top: 10px;
+  border: #616060;
+  border-radius: 1rem;
+  cursor: pointer;
+}

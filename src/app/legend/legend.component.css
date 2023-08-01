@@ -1,0 +1,15 @@
+.entry {
+    display: flex;
+}
+
+.text {
+    font-size: 14px;
+    color: rgb(182,182,182);
+}
+
+.color {
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    margin: 0px 35px 0px 15px;
+}

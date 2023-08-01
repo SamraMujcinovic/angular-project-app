@@ -1,0 +1,32 @@
+.tab {
+    width: 100%;
+    display: flex;
+    padding: 0px;
+    background-color: rgb(253,253,253);
+    border: none;
+    gap: 3px;
+}
+
+.key {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px 0px 5px 8px;
+    box-shadow: 1px 0px 3px 1px rgb(223,223,223);
+    background-color: rgb(245,245,245);
+    color: rgb(101,101,101);
+    border: 1px solid rgb(244,244,244);
+    font-weight: bold;
+    margin: 1px;
+}
+
+.value {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    box-shadow: 1px 0px 5px 1px rgb(223,223,223);
+    background-color: rgb(254,254,254);
+    color: rgb(101,101,101);
+    border: 1px solid rgb(244,244,244);
+}

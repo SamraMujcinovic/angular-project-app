@@ -1,0 +1,45 @@
+.div {
+  display: flex;
+  position: relative;
+}
+
+.divName {
+  background-image: linear-gradient(
+    106deg,
+    rgba(15, 97, 230, 1) 0%,
+    rgba(15, 74, 170, 1) 97%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  border-radius: 1rem 0rem 0rem 1rem;
+  font-weight: bold;
+  flex: 1;
+  display: flex;
+  box-shadow: 0px 0px 5px 1px rgb(223, 223, 223);
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.divNumber {
+  border-radius: 0rem 1rem 1rem 0rem;
+  padding: 0.5rem 0.5rem;
+  background-image: linear-gradient(
+    106deg,
+    rgba(15, 97, 230, 1) 0%,
+    rgba(15, 74, 170, 1) 97%
+  );
+  color: rgb(169, 203, 255);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.error-icon {
+  position: absolute;
+  right: -8px;
+  top: -10px;
+}

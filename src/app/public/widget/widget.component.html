@@ -1,0 +1,50 @@
+<div class="rectangular-component">
+  <div class="upper-middle">
+    <div class="corner-icon">
+      <img src="{{ iconSvg }}" />
+      <span class="title-text">{{ title }}</span>
+    </div>
+    <div class="corner-icon right-corner">
+      <app-error-icon *ngIf="showErrorIcon"></app-error-icon>
+      <i class="fas fa-info-circle"></i>
+    </div>
+  </div>
+  <div class="counter">
+    <div class="subcomponent">
+      <div>
+        <a class="corner-text1">Trucks in dealership</a>
+        <a class="upper-right"> Today</a>
+      </div>
+      <div class="integer-counter">{{ trucks_in }}</div>
+      <div class="double-counter">
+        <div class="counter-wrapper">
+          <div class="counter-title">With driver</div>
+          <div class="integer-counter2">{{ with_driver }}</div>
+        </div>
+        <div class="counter-separator"></div>
+        <div class="counter-wrapper">
+          <div class="counter-title">No driver</div>
+          <div class="integer-counter2">{{ no_driver }}</div>
+        </div>
+      </div>
+      <div class="daily-average">
+        <div class="average-title">Daily average:</div>
+        <div class="average-counter">{{ average }}</div>
+        <div class="average-title">trucks</div>
+      </div>
+    </div>
+    <div class="subcomponent">
+      <div class="corner-text">Average repair time</div>
+      <div class="time-text">Days Hours Min</div>
+      <div class="time-counter">{{ hh }}:{{ mm }}:{{ ss }}</div>
+    </div>
+    <div class="subcomponent">
+      <div class="corner-text">Repairs in dealership cost</div>
+      <div class="money-counter">${{ cost }}</div>
+      <div class="small-counter">${{ cpm }} CPM</div>
+    </div>
+    <div class="button-div">
+      <button class="see-more-button">See more</button>
+    </div>
+  </div>
+</div>

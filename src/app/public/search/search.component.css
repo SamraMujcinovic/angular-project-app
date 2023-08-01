@@ -1,0 +1,26 @@
+.inputSearchDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box{
+    max-width: 80%;
+    padding: 0.8125rem;
+    border: 0.0625rem solid #ccc;
+    border-radius: 1rem;
+    font-size: 1rem;
+    flex: 1;
+    
+}
+
+.search-icon {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-left: -2rem;
+}
+
+.search-icon i {
+    color: #aaa;
+}

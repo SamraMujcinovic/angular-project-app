@@ -1,0 +1,275 @@
+<div class="main">
+  <div class="header">
+    <div class="headerLeft">
+      <p class="fleetHealthParagraph">Fleet Health</p>
+
+      <button class="overviewButton">Overview</button>
+    </div>
+
+    <div class="headerMiddle">
+      <app-health-division
+        [name]="'Dealer&Shop'"
+        [number]="8"
+        [showErrorIcon]="true"
+      ></app-health-division>
+
+      <app-health-division
+        [name]="'Road Service'"
+        [number]="8"
+      ></app-health-division>
+
+      <app-health-division [name]="'Yard'" [number]="8"></app-health-division>
+      <app-health-division
+        [name]="'Recovery'"
+        [number]="18"
+      ></app-health-division>
+
+      <app-health-division
+        [name]="'Abandoned'"
+        [number]="3"
+      ></app-health-division>
+    </div>
+
+    <div class="headerRight">
+      <app-search></app-search>
+    </div>
+  </div>
+
+  <div class="content">
+    <div *ngIf="isPopupVisible" class="popup-container">
+      <app-popup></app-popup>
+    </div>
+    <div class="content-header">
+      <div class="corner-text">Overview</div>
+      <div class="header-container">
+        <div class="select-period">
+          <button class="select-period-button">
+            <div class="select-period-button-text">
+              <span
+                style="
+                  font-size: 12px;
+                  padding-left: 10px;
+                  color: rgb(182, 182, 182);
+                "
+              >
+                Selected period
+              </span>
+              <span style="padding: 10px 25px 10px 35px; font-weight: bold">
+                Jan 1, 2023 - Avg 31, 2023
+              </span>
+            </div>
+            <div class="select-period-button-icon">
+              <img src="assets/calendar.svg" />
+            </div>
+          </button>
+        </div>
+        <div class="create-work-order">
+          <button (click)="showPopup()" class="create-work-order-button">
+            <div class="create-work-order-button-text">
+              <span> Create </span>
+              <span style="font-weight: bold"> Work Order </span>
+            </div>
+            <div class="create-work-order-button-icon">
+              <i class="fas fa-wrench"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="central-container">
+      <div class="left-part">
+        <div class="left-part-nav">
+          <div class="left-part-nav-tab selected first-tab">
+            <img style="width: 35px; height: 30px" src="assets/truck.svg" />
+          </div>
+          <div class="left-part-nav-tab">
+            <i class="fas fa-wrench"></i>
+          </div>
+          <div class="left-part-nav-tab new">
+            <button
+              (mouseover)="showTooltip = true"
+              (mouseleave)="showTooltip = false"
+            >
+              <i class="fas fa-gas-pump"></i>
+            </button>
+            <div *ngIf="showTooltip" class="fuelConsumptionToolTip">
+              Fuel consumption
+            </div>
+          </div>
+          <div class="left-part-nav-tab">
+            <img style="width: 35px; height: 35px" src="assets/tire.svg" />
+          </div>
+          <div class="left-part-nav-tab">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="left-part-nav-more">
+            <i class="fa fa-caret-right"></i>
+          </div>
+        </div>
+        <div class="left-part-header">
+          <div class="left-part-header-title">Active trucks</div>
+          <div class="left-part-header-description">
+            Current number of trucks with assigned drivers.
+          </div>
+        </div>
+        <div class="left-part-main">
+          <div class="left-part-main-space"></div>
+          <div class="left-part-main-count">215</div>
+          <div class="left-part-main-percent">74%</div>
+        </div>
+        <div class="left-part-bottom">
+          <div class="left-part-bottom-left">
+            <div class="left-part-bottom-title">Total trucks</div>
+            <div class="left-part-bottom-subcontainer">
+              <div class="left-part-bottom-count">250</div>
+              <div class="left-part-bottom-space"></div>
+            </div>
+          </div>
+          <div class="left-part-bottom-right">
+            <div class="left-part-bottom-title">Empty trucks</div>
+            <div class="left-part-bottom-subcontainer">
+              <div class="left-part-bottom-count" style="margin-left: 1.5rem">
+                35
+              </div>
+              <div class="left-part-bottom-percent">26%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-part">
+        <div class="right-part-header">
+          <div class="right-part-header-top">
+            <div class="right-part-header-top-left">
+              <div class="right-part-header-top-left-title">
+                Utilization timeline
+              </div>
+              <div class="right-part-header-top-left-description">
+                A graph showing the number of trucks with assigned drivers
+                versus loaded trucks.<br />The actual amount will be shown in
+                the preview by day. The preview by week or higher range will
+                reveal average numbers.
+              </div>
+            </div>
+            <div class="right-part-header-top-right">
+              <div class="date-selection">
+                <button class="date-selection-button">
+                  <div class="date-selection-button-text">
+                    <span> Jan 1, 2023 - Avg 31, 2023 </span>
+                  </div>
+                  <div class="date-selection-button-icon">
+                    <span> By month </span>
+                    <i class="fa fa-caret-down"></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="right-part-header-bot">
+            <app-stats [text]="'Utilization'" [number]="63"></app-stats>
+            <app-stats [text]="'Total utilization'" [number]="54"></app-stats>
+          </div>
+        </div>
+        <div class="right-part-main">
+          <app-graph></app-graph>
+        </div>
+        <div class="right-part-bottom">
+          <app-legend
+            [text]="'Total number fo trucks'"
+            [color]="'rgb(230,230,230)'"
+          ></app-legend>
+          <app-legend
+            [text]="'Assigned trucks'"
+            [color]="'rgb(15,80,185)'"
+          ></app-legend>
+          <app-legend
+            [text]="'Loaded trucks'"
+            [color]="'rgb(255,96,0)'"
+          ></app-legend>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <app-widget
+        [title]="'Dealership'"
+        [iconSvg]="'dealership'"
+        [trucks_in]="5"
+        [with_driver]="4"
+        [no_driver]="1"
+        [average]="19"
+        [hh]="'05'"
+        [mm]="'09'"
+        [ss]="'52'"
+        [cost]="'335.000'"
+        [cpm]="'0.07'"
+        [showErrorIcon]="true"
+      ></app-widget>
+      <app-widget
+        [title]="'Shop'"
+        [iconSvg]="'shop'"
+        [trucks_in]="3"
+        [with_driver]="3"
+        [no_driver]="0"
+        [average]="23"
+        [hh]="'00'"
+        [mm]="'15'"
+        [ss]="'13'"
+        [cost]="'11.511'"
+        [cpm]="'0.04'"
+      ></app-widget>
+      <app-widget
+        [title]="'Road Service'"
+        [iconSvg]="'road_service'"
+        [trucks_in]="11"
+        [with_driver]="7"
+        [no_driver]="4"
+        [average]="19"
+        [hh]="'00'"
+        [mm]="'02'"
+        [ss]="'13'"
+        [cost]="'49.561'"
+        [cpm]="'0.07'"
+      ></app-widget>
+      <app-widget
+        [title]="'Yard'"
+        [iconSvg]="'yard'"
+        [trucks_in]="7"
+        [with_driver]="5"
+        [no_driver]="2"
+        [average]="19"
+        [hh]="'03'"
+        [mm]="'15'"
+        [ss]="'13'"
+        [cost]="'49.561'"
+        [cpm]="'0.07'"
+      ></app-widget>
+      <app-widget
+        [title]="'Recovery'"
+        [iconSvg]="'recovery'"
+        [trucks_in]="18"
+        [with_driver]="11"
+        [no_driver]="7"
+        [average]="19"
+        [hh]="'03'"
+        [mm]="'15'"
+        [ss]="'13'"
+        [cost]="'49.561'"
+        [cpm]="'0.07'"
+      ></app-widget>
+      <app-widget
+        [title]="'Abandoned'"
+        [iconSvg]="'abandoned'"
+        [trucks_in]="7"
+        [with_driver]="11"
+        [no_driver]="7"
+        [average]="19"
+        [hh]="'03'"
+        [mm]="'15'"
+        [ss]="'13'"
+        [cost]="'49.561'"
+        [cpm]="'0.07'"
+      ></app-widget>
+    </div>
+  </div>
+</div>
